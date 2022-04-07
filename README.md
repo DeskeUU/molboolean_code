@@ -20,7 +20,7 @@ The code is split by 'cells', 'tissues' and 'treatment'. For all three cases the
 
 Once the blobs have been so categorised a csv file is produced. This csv file is run through the R scripts to produce the final plots as shown in the manuscript: boxplots for the 'cells', piecharts for the 'tissues' and boxplots with signficance added for the 'treatments'.
 
-The examples given include EMD-LMNB1 (Fig. 3a and Supp. Fig 4a in manuscript) for the 'cells', Ecad-bcat in prostate (Fig. 6c and Supp. Fig. 7c) for the 'tissues' and TGFb1 treated Ecad-bcat (Fig. 5a) for the 'treatments'.
+The examples given include EMD-LMNB1 (Fig. 6a and Supp. Fig. 6a in manuscript) for the 'cells', Ecad-bcat in prostate (Fig. 5b and Supp. Fig. 5c) for the 'tissues' and TGFb1 treated Ecad-bcat (Fig. 5a and Supp. Fig. 5a) for the 'treatments'.
 
 Reproducing the results as shown in the Jupyter notebooks and the manuscript plots requires creating csv files from the three CellProfiler output files (with the suffices 'Image', 'Both_Cells' and 'BlobsInCells') from the source data shared with the manuscript.
 
