@@ -6,7 +6,7 @@ In this repository we provide code to accompany the paper:
 
 ### By Raykova et al.
 
-The code is based on both python and R and includes Jupyter notebooks (https://jupyter.org/) for setting the thresholds, as discussed below. The code has been tested on macOS version 12.1, python version 3.7.6 and R version 3.6.2. Code for analysis of PLA data has been tested on Windows 10 with R version 4.0.2.
+The code is based on both python and R and includes Jupyter notebooks (https://jupyter.org/) for setting the thresholds, as discussed below. The code has been tested on macOS version 12.1, python version 3.7.6 and R version 3.6.2. Code for analysis of the PLA data has also been tested on Windows 10 with R version 4.0.2.
 
 Python libraries required: pandas, numpy, matplotlib.
 
