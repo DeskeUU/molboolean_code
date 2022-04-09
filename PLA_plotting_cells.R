@@ -9,7 +9,7 @@ library(rstatix)
 library(psych)
 
 #Read in .csv output file from CellProfiler:
-# replace /path/to/folder/ below with path to experiment folder
+#replace /path/to/folder/ below with path to experiment folder
 dir_path <- "/path/to/folder/"
 expt_name <- "EMD-LMNB1_MCF7" # name of experiment folder   
 root_dir <- paste(dir_path, expt_name, "/", sep="")
@@ -35,13 +35,13 @@ mydata$Well[mydata$ImageNumber >=31] <-"B2"
 mydata$Well[mydata$ImageNumber >=34] <-"B3"
 
 #Create a new column "Condition" with information on experimental condition
-mydata$Condition[mydata$Slide =="S1"] <-"EMD"
-mydata$Condition[mydata$Slide == "S2"] <-"LMNB1"
-mydata$Condition[mydata$Slide == "S3"] <-"EMD-LMNB1"
+mydata$Condition[mydata$Slide =="S1"] <-"EMD only"
+mydata$Condition[mydata$Slide == "S2"] <-"LMNB1 only"
+mydata$Condition[mydata$Slide == "S3"] <-"EMD-LMNB1 complex"
 
 
 #Change "Condition" to a factor instead of a character and define the levels to get it in the right order in the plots later
-mydata$Condition <-factor(mydata$Condition, levels = c("EMD", "LMNB1", "EMD-LMNB1"))
+mydata$Condition <-factor(mydata$Condition, levels = c("EMD only", "LMNB1 only", "EMD-LMNB1 complex"))
 class(mydata$Condition)
 levels(mydata$Condition)
 
@@ -76,10 +76,10 @@ mydata$Condition <- recode_factor(mydata$Condition, 'EMD'='Protein A only', 'LMN
 
 #split data set for plotting based on condition
 EMD_LMNB1<-mydata %>%
-  filter(Condition == "Protein A-Protein B complex")
+  filter(Condition == "EMD-LMNB1 complex")
 
 EMD_LMNB1_omitting<-mydata %>%
-  filter(Condition != "Protein A-Protein B complex")
+  filter(Condition != "EMD-LMNB1 complex")
 
 
 #Plot RCP/cell
