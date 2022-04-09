@@ -28,7 +28,7 @@ Running the code for the thresholding and plotting in each case takes only a cou
 
 ### PLA
 
-The code is split by 'cells' and 'treatment'. For all cases RCP in the cells (termed blobs in the code) are available from the csv output file from CellProfiler with the suffix '_Cells'. The CellProfiler output file with the suffix '_Image' information on content of the image via the image file name.
+The code is split by 'cells' and 'treatment'. For all cases RCP in the cells (termed blobs in the code) are available from the csv output file from CellProfiler with the suffix '_Cells'. The CellProfiler output file with the suffix '_Image' contains information on content of the image via the image file name.
 
 The CellProfiler csv file '_Cells' is run directly through the R script to produce boxplots as shown in the manuscript for both 'cells' and 'treatments'. 
 The examples given include EMD-LMNB1 for 'cells' and Ecad-bcat for 'treatments'.
